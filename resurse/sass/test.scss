@@ -1,0 +1,21 @@
+div{
+    div:hover>&>p>{
+        a,b{
+            background: yellow;
+        }
+    }
+}
+
+
+$a:(4px+4px)/2;
+$b:4px;
+//$a=4px;
+$c:2px*2s/1s;
+
+div{
+    div:hover>&>p>{
+        font-size: $a;
+        font-size: $b;
+        font-size: $c;
+    }
+}

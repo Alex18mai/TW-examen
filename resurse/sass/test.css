@@ -1,0 +1,10 @@
+div:hover > div > p > a, div:hover > div > p > b {
+  background: yellow;
+}
+
+div:hover > div > p > {
+  font-size: 4px;
+  font-size: 4px;
+  font-size: 4px;
+}
+/*# sourceMappingURL=test.css.map */

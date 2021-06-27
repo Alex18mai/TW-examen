@@ -1,0 +1,39 @@
+html {
+
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--colorText);
+}
+
+body {
+
+    background: var(--colorBg);
+    background-size: cover;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+}
+
+a{
+	color: var(--colorA);
+}
+
+h1, h2, h3{
+    color : var(--colorA);
+}
+
+#homeLink{
+	max-width:300px;
+    width:100%;
+}
+
+iframe{
+    max-width:550px;
+    width:100%;
+}
+
+#watermark
+{
+    display:none;
+}
+

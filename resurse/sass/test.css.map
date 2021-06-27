@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACI,AACI,GADD,AAAA,MAAM,GADb,GAAG,GACa,CAAC,GACT,CAAC,EADL,GAAG,AAAA,MAAM,GADb,GAAG,GACa,CAAC,GACP,CAAC,CAAA;EACC,UAAU,EAAE,MAAM;CACrB;;AAWL,AAAA,GAAG,AAAA,MAAM,GADb,GAAG,GACa,CAAC,GAAC;EACV,SAAS,EAPd,GAAW;EAQN,SAAS,EAPd,GAAG;EAQE,SAAS,EANd,GAAS;CAOP",
+    "sources": [
+        "test.scss"
+    ],
+    "names": [],
+    "file": "test.css"
+}

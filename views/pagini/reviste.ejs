@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <%- include("../fragmente/head") %>
+    <script src="/resurse/js/reviste.js"></script>
+
+</head>
+
+<%- include("../fragmente/header") %>
+
+    <body>
+
+        <main>
+
+            <div class="filtre">
+
+                <p>Sorteaza: </p>
+                <div>
+                    <div class="radiobutton">
+                        <input type="radio" id="Cresc" name="radio1" value="Cresc" checked>
+                        <label for="clasic">Cresc</label><br>
+                    </div>
+
+
+                    <div class="radiobutton">
+                        <input type="radio" id="Descresc" name="radio1" value="Descresc">
+                        <label for="oricare">Descresc</label><br>
+                    </div>
+
+                    <div>
+                        <button id="sortare">Sorteaza dupa raport pagini/pret</button>
+                    </div>
+                </div>
+
+
+                <p>Filtreaza: </p>
+                <div>
+                    <div class="check">
+                        <input type="checkbox" id="sport" name="sport" value="sport" checked>
+                        <label for="sport"> sport</label><br>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="tehnica" name="tehnica" value="tehnica" checked>
+                        <label for="tehnica"> tehnica</label><br>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="stiinta" name="stiinta" value="stiinta" checked>
+                        <label for="stiinta"> stiinta</label><br>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="copii" name="copii" value="copii" checked>
+                        <label for="copii"> copii</label><br>
+                    </div>
+
+                    <div>
+                        <button id="filtrare">Filtreaza</button>
+                    </div>
+                </div>
+
+                <p>Pret Maxim: </p>
+
+
+                <div>
+                    <div>
+                        <label> <input type="range" id="inp-pret" value="100" min="0" max="100" oninput="this.nextElementSibling.value = this.value"> <output>100</output></label>
+                    </div>
+
+                    <div>
+                        <button id="setare">Seteaza</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <section id="produse">
+                <h1>Reviste</h1>
+                <div class="grid-produse">
+                    <% for( let prod of locals.produse) { %>
+                        <article class="produs" id="idr-<%- prod.id%>">
+                            <h2 class="titlu"><i><u><span class="val-nume"><%- prod.titlu%></span> (<span class="val-nrpagini"><%- prod.nrpagini%></span>)</u></i></h2>
+
+                            <p class="aparitie">Tip aparitie: <span class="val-aparitie"><%- prod.aparitie%></span></p>
+                            <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
+                            
+                            <p>Tematici: </p>
+                            <ul class="tematici">
+                                <% for( let tema of prod.tematici.split('/')) { %>
+                                    <li class="val-tema"><%- tema%></li>
+                                <% }%>
+                            </ul>
+                        </article>
+                    <% }%>
+            </section>
+
+		</main>
+
+		<%- include("../fragmente/footer") %>
+
+	</body>

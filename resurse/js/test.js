@@ -1,0 +1,1 @@
+x=document.getElementsByClassName("ceva"); alert(x[x.length-3].innerHTML)
